@@ -1,12 +1,53 @@
-<html ng-app="app">
-    <head><title></title></head>
-    <body ng-controller="MyFormCtrl">
-         <form name="myForm" ng-submit="MyFormCtrl.register()">
-             Name: <input type="text" ng-model="MyFormCtrl.user.name">
-             Email: <input type="email" ng-model="MyFormCtrl.user.email">
-             <input type="submit" value="Register">
+<!-- <html ng-app="scopeExample">
+    <head><title>Learning Angular</title></head>
+    <body ng-controller="MyFormCtrl as ctrl">
+         <form name="myForm" ng-submit="ctrl.register()">
+            Name: <input type="text" ng-model="ctrl.user.name"><br>
+            Email: <input type="email" ng-model="ctrl.user.email"><br>
+            User Name: <input type="text" ng-model="ctrl.user.username"><br>
+            Male: <input type="radio" ng-model="ctrl.user.gender" value="male" checked><br>
+            Female: <input type="radio" ng-model="ctrl.user.gender" value="female"><br>
+            Other: <input type="radio" ng-model="ctrl.user.gender" value="other"><br>
+            Are you Using an <input type="checkbox" ng-model="ctrl.user.isanAppleUser" value="Yes"><br>
+            No: <input type="checkbox" ng-model="ctrl.user.isanAndroidUser" value="Yes"><br> 
+            <input type="submit" value="Register">
          </form>
-       <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+       <script src="angular.min.js"></script>
        <script src="js.js"></script>
     </body>
+    <body>
+        <div ng-controller="MyController">
+            Your name:<input type="text" ng-model="username">
+            Name: <input type="text" ng-model="name"><br>
+            Email: <input type="email" ng-model="email"><br>
+            <button ng-click='sayHello()'>greet</button>
+            {{greeting}}
+            </div>
+        <script src="angular.min.js"></script>
+        <script src="js.js"></script>
+    </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="formCtrl">
+  <form>
+    First Name: <input type="text" ng-model="user.firstname"><br>
+    Last Name: <input type="text" ng-model="user.lastname"><br>
+    Email: <input type="email" ng-model="user.email"><br>
+    User Name: <input type="text" ng-model="user.username"><br>
+    Male: <input type="radio" ng-model="user.gender" value="male" checked><br>
+    Female: <input type="radio" ng-model="user.gender" value="female"><br>
+    Other: <input type="radio" ng-model="user.gender" value="other"><br>
+    Apple User<input type="checkbox" ng-model="user.isanAppleUser" value="Yes"><br>
+    Android User <input type="checkbox" ng-model="user.isanAndroidUser" value="Yes"><br> 
+    <button ng-click='sayHello()'>greet</button>
+  </form>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="js.js"></script>
+</body>
 </html>
